@@ -1,0 +1,49 @@
+<div class="overlay">
+  <form #f="ngForm">
+    <label for="username">Nome:</label>
+    <input
+      type="text"
+      id="username"
+      placeholder="Ex: Lucas"
+      [(ngModel)]="user.username"
+      name="username"
+    />
+    <label for="password">Senha:</label>
+    <input
+      type="password"
+      id="password"
+      placeholder="Senha para login"
+      [(ngModel)]="user.password"
+      name="password"
+    />
+    <div class="container">
+      <label for="age">Idade:</label>
+      <input
+        type="number"
+        id="age"
+        [(ngModel)]="user.age"
+        name="age"
+        placeholder="Insira sua idade"
+      />
+      <label>
+        Notificações:
+        <input
+          type="checkbox"
+          [checked]="user.notifications"
+          (change)="user.notifications = !user.notifications"
+          name="notifications"
+        />
+      </label>
+    </div>
+    <div class="container">
+      <label for="color">Escolha uma cor:</label>
+      <input type="color" id="color" [(ngModel)]="user.color" name="color" />
+      <label for="file" id="photoLabel"
+        ><input type="file" id="file" (change)="onSelect($event)" name="photo" />
+        Procurar foto</label
+      >
+    </div>
+    <button type="submit" (click)="submit()">Enviar</button>
+  </form>
+  <app-card [user]="user"></app-card>
+</div>

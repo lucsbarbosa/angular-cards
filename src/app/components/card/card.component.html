@@ -1,0 +1,7 @@
+<div class="card" [ngStyle]="{ 'background-color': user.color }">
+  <img [src]="user.photo" alt="" *ngIf="user.photo" />
+  <h2>Nome: {{ user.username }}</h2>
+  <p>Senha: {{ user.password }}</p>
+  <p>Idade: {{ user.age }}</p>
+  <p>Habilitou as notificações: {{ user.notifications }}</p>
+</div>

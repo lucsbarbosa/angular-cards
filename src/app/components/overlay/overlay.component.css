@@ -1,0 +1,83 @@
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(102, 51, 153, 0.1);
+}
+
+label {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.4rem;
+}
+
+form {
+  background-color: #0e0e0e;
+  padding: 0 2.4rem;
+  border-radius: 0.8rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.6rem;
+  height: 46rem;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+  margin-top: 1.6rem;
+}
+
+input {
+  outline: none;
+}
+
+input:not(input[type="color"]) {
+  font-family: "Montserrat";
+  font-size: 1.6rem;
+  padding: 0.8rem;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input::placeholder {
+  font-family: "Montserrat";
+  font-size: 1.6rem;
+}
+
+button[type="submit"] {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  padding: 1rem 0;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  background-color: rebeccapurple;
+  border: none;
+  color: white;
+  margin-top: 1.6rem;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+#photoLabel {
+  font-size: 1.6rem;
+  border-radius: 0.8rem;
+  padding: 0.8rem 1.6rem;
+  cursor: pointer;
+  margin-left: 2.4rem;
+  background-color: gray;
+}
